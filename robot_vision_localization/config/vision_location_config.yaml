@@ -1,0 +1,18 @@
+vision_location_config:
+        config:
+              camera_num: 3
+              EndVisionEnableTopic:  "/end_vision_enable"
+              tfBaseToWorld: ["base","world"]
+              tfWorldToMarker: ["world","marker"]
+              tfCamerasToBase:  ["camera0" ,"base","camera1","base","camera2", "base"]
+              OdomTopic:  "/odom"
+              CameraControlTopic: "/camera_control"
+              BasePoseTopic: "basePose2d"
+              PoseCalibrationTopic: "/poseCalibration"
+              BasePoseCovStampTopic: "basePoseCovStamped"
+              frame_id:  "map"
+              markers_map_pose_topic:  ["/camera0/arucoMarkersMapPose","/camera1/arucoMarkersMapPose","/camera2/arucoMarkersMapPose"]       #输入二维码姿态topic名称
+              debug: true
+
+
+

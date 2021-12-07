@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "${workspaceFolder}/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "${workspaceFolder}/src/aruco_markers_detect/include/**",
+        "${workspaceFolder}/src/hikvision_camera/include/**",
+        "${workspaceFolder}/src/robot_vision_localization/include/**",
+        "${workspaceFolder}/src/agv_work/include/**",
+        "/usr/include/**",
+        "/usr/local/include/modbus/**",
+        "/usr/local/include/aruco/**",
+        "/opt/MVS/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

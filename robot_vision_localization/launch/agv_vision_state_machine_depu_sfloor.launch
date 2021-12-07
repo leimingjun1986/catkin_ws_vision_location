@@ -1,0 +1,15 @@
+<launch>
+    <!-- <arg name="pi"                      value="3.1415926" />  -->
+    <node name="agv_vision_localization" pkg="robot_vision_localization" type="agv_vision_state_machine" output="screen" respawn="true" />
+   
+    <!-- 以下为在 德普一楼的世界坐标系到二维码坐标系的变换   args：x y z yaw pitch roll  单位为米  弧度-->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="world_to_marker_broadcaster" args="0.0   0.0  0.973  1.5707963  0.0  1.5707963 world marker 100"/>  -->
+    <node pkg="tf" type="static_transform_publisher" name="world_to_marker_broadcaster" args="0.0   0.0  0.805  1.5707963  0.0  1.5707963 world marker 100"/>
+    <!-- 101 参数 -->
+    <node pkg="tf" type="static_transform_publisher" name="base_to_camera0_broadcaster"  args="0.302   -0.151  0.7546   3.14159  0   -1.57079   base camera0   100"/>
+    <!-- camera1: face left -->
+    <node pkg="tf" type="static_transform_publisher" name="base_to_camera1_broadcaster"  args="0.302   0.151   0.7546   0   0   -1.57079   base camera1    100"/>    
+    <!-- camera2: face forward/backward  0.4366 0.0 1.161 3.1416 1.5707963 0 -->
+    <!-- 3.1415926 -->
+    <node pkg="tf" type="static_transform_publisher" name="base_to_camera2_broadcaster"  args="0.395   0.000   0.7546   -1.57079      0   -1.57079  base camera2    100"/>   
+</launch>
